@@ -48,8 +48,11 @@ body {
 }
 
 #main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   transition: margin-left .5s;
-  padding: 16px;
 }
 
 /* Style the header */
@@ -81,7 +84,6 @@ article {
   padding: 20px;
   width: 70%;
   background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -126,9 +128,14 @@ li b {
   text-decoration: none;
 }
 
+li b:hover {
+  background-color: #111;
+}
+
 li a:hover:not(.active) {
   background-color: #111;
 }
+
 
 .active {
   background-color: #fda602;
@@ -162,18 +169,16 @@ li a:hover:not(.active) {
 </ul>
 
 <header>
-<h3>This is a Heading 0</h3>
+<h3>JWFunk</h3>
 </header>
 <section>
 <nav>
-<p>Update</p>
+<a href="https://github.com/jwfunk">GitHub</a>
 </nav>
-<article>
-<p>This is a paragraph.</p>
-</article>
 </section>
 </div>
 <script>
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";

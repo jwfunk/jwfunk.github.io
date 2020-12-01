@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+navr{
+  float: right;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+.ttt {
+	width: 40%;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+tttr {
+	list-style-type: none;
+	margin: 0;
+	padding 0;
+	overflow: hidden;
+	background-color: #111;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li b {
+  display: block;
+  color: orange;
+  text-align: center;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+
+li c {
+	display: black;
+	color: black;
+	text-align: center;
+	padding: 19px 20px;
+	test-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+li b:hover {
+  background-color: #111;
+}
+
+
+li c:hover {
+	cursor:pointer;
+	background-color: #555;
+}
+
+.top {
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.bottom {
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.right {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.left{
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.middle{
+	outline: 2px solid black;
+}
+
+.active {
+  background-color: #fda602;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id ="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class = "closebtn" onclick="closeNav()">&times;</a>
+<a></a>
+</div>
+
+<div id="main">
+<ul>
+<li id="menubtn"><b><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></b></li>
+<li><a href="index.html">Home</a></li>
+<li><a class="active">Projects</a></li>
+</ul>
+
+<header>
+<h3>Projects</h3>
+</header>
+<section>
+<nav>
+<p>Update</p>
+<button onclick="callAwsLambdaFunction(-1)">Click me!</button>
+<h1><div id="myDiv"></div></h1>
+</nav>
+<article>
+This is a project that was based off the concept of Neural Networks. The main difference is instead of the nodes being represented as weights that define an equation, this network simulates Neurons and the charges that propagate through them. The Network starts off with a set of Neurons that represent inputs and outputs. The input Neurons fire when a condition is satisfied. The "decision" of the Network is given when an output Neuron is fired.
+<br><br>
+Below you can play against an AI that has been trained using this framework
+</article>
+<navr>The AI making moves in this is run by an aws Lambda function that has the Network's moves uploaded to it. This was done just to experiment with Lambda functions and API calls.</navr>
+<article class="ttt">
+<tttr>
+	<li>
+		<c id ="0" onclick="makeMove(0)">_</c><c id ="1" class="top" onclick="makeMove(1)">_</c><c id ="2" onclick="makeMove(2)">_</c>
+	</li>
+</tttr>
+</article>
+<article class="ttt">
+<tttr>
+	<li>
+		<c id ="3" class="left" onclick="makeMove(3)">_</c><c id ="4" class="middle" onclick="makeMove(4)">_</c><c id ="5" class="right" onclick="makeMove(5)">_</c>
+	</li>
+</tttr>
+</article>
+<article class="ttt">
+<tttr>
+	<li>
+		<c id ="6" onclick="makeMove(6)">_</c><c id ="7" class="bottom" onclick="makeMove(7)">_</c><c id ="8" onclick="makeMove(8)">_</c>
+		<button onclick="reset()">RESET</button>
+	</li>
+</tttr>
+</article>
+</section>
+</div>
+<script>
+
+var a = "";
+var turn = -1;
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("menubtn").style.width = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("menubtn").style.width = "42px";
+}
+
+function makeMove(pos) {
+	if(document.getElementById(pos).innerHTML == "_"){
+		document.getElementById(pos).innerHTML = "X";
+		a += pos;
+		if(a == "")
+			a = "-1";
+		callAwsLambdaFunction(a);
+	}
+}
+
+function reset(){
+	for(i = 0;i < 9;++i){
+		document.getElementById(i).innerHTML = "_"
+	}
+	a = "";
+	if(turn == 1){
+		turn = -1;
+	}
+	else{
+		a += "-1";
+		callAwsLambdaFunction(a);
+		turn = 1;
+	}
+}
+
+function checkIfDone(){
+		var i;
+		var done = 1;
+		for(i = 0;i < 9;++i){
+			if(document.getElementById(i).innerHTML == "_"){
+				done = 0;
+			}
+		}
+		if(done == 1){
+			for(i = 0;i < 9;++i){
+				document.getElementById(i).innerHTML = "_"
+			}
+			a = "";
+		}
+}
+
+function callAwsLambdaFunction(pos) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("myDiv").innerHTML = a + this.responseText;
+		document.getElementById(this.responseText.charAt(1)).innerHTML = "O";
+            }
+        };
+	var url = "https://ajxaowarnk.execute-api.us-east-2.amazonaws.com/prod?input=" + pos;
+        xhttp.open("GET", url, true);
+        xhttp.send();
+
+    }
+</script>
+</body>
+</html>

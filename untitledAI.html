@@ -179,7 +179,6 @@ function callAwsLambdaFunction(pos) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("myDiv").innerHTML = a + this.responseText;
 		document.getElementById(this.responseText.charAt(1)).innerHTML = "O";
             }
         };

@@ -24,7 +24,6 @@ li c {
 }
 
 .ttt {
-	min-width: 250px;
 	width: 50%;
 }
 .navr{
@@ -33,6 +32,12 @@ li c {
   background: #ccc;
   padding: 20px;
   min-height: 178px;
+}
+
+.picr{
+  float: right;
+  width: calc(100% - 400px);
+  padding 20px;
 }
 
 .tttr {
@@ -66,6 +71,16 @@ li c {
 
 .middle{
 	outline: 2px solid black;
+}
+@media (max-width: 575px) {
+  .ttt {
+    width: 100%;
+    height: auto;
+  }
+  .navr {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 </style>
@@ -126,6 +141,7 @@ Below you can play against an AI that has been trained using this framework
 The network starts off in a default state, in this case with 10 input neurons and 9 output neurons plus 10 additional neurons that resemble the start of each possible move for the game tree. Additionally, there are 10 other neurons that prevent charges from propogating down other pathes once the initial one is started.
 <br><br>
 <img src="default.png" width="400px">
+<article class="picr">Note that this diagram does not inculd all of the connections for the default network. All of the left white nodes would be connected to all of the right white nodes except their respective counterpart like the top one is. These were omitted in order to keep the diagram visually appealing.</article>
 </article>
 </section>
 </div>

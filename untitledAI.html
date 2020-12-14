@@ -19,12 +19,17 @@ li c {
 	text-decoration: none;
 }
 
+.br {
+	float: initial;
+}
+
 .ttt {
-	width: 40%;
+	min-width: 250px;
+	width: 50%;
 }
 .navr{
   float: right;
-  width: 60%;
+  width: 50%;
   background: #ccc;
   padding: 20px;
   min-height: 178px;
@@ -91,20 +96,22 @@ This is a project that was based off the concept of Neural Networks. The main di
 Below you can play against an AI that has been trained using this framework
 </article>
 <nav class="navr">The AI making moves in this is run by an aws Lambda function that has the Network's moves uploaded to it. This was done just to experiment with Lambda functions and API calls.</nav>
+<div>
 <article class="ttt">
 <div class="tttr">
-	<li>
-		<c id ="0" onclick="makeMove(0)">_</c><c id ="1" class="top" onclick="makeMove(1)">_</c><c id ="2" onclick="makeMove(2)">_</c>
-	</li>
+	<li><c id ="0" onclick="makeMove(0)">_</c>
+	<li><c id ="1" class="top" onclick="makeMove(1)">_</c>
+	<li class="br"><c id ="2" onclick="makeMove(2)">_</c>
 </div>
 </article>
 <article class="ttt">
 <div class="tttr">
-	<li>
-		<c id ="3" class="left" onclick="makeMove(3)">_</c><c id ="4" class="middle" onclick="makeMove(4)">_</c><c id ="5" class="right" onclick="makeMove(5)">_</c>
-	</li>
+	<li><c id ="3" class="left" onclick="makeMove(3)">_</c>
+	<li><c id ="4" class="middle" onclick="makeMove(4)">_</c>
+	<li class="br"><c id ="5" class="right" onclick="makeMove(5)">_</c>
 </div>
 </article>
+<br>
 <article class="ttt">
 <div class="tttr">
 	<li>
@@ -112,6 +119,13 @@ Below you can play against an AI that has been trained using this framework
 		<button onclick="reset()">RESET</button>
 	</li>
 </div>
+</article>
+</div>
+<br><br>
+<article>
+The network starts off in a default state, in this case with 10 input neurons and 9 output neurons plus 10 additional neurons that resemble the start of each possible move for the game tree. Additionally, there are 10 other neurons that prevent charges from propogating down other pathes once the initial one is started.
+<br><br>
+<img src="default.png" width="400px">
 </article>
 </section>
 </div>

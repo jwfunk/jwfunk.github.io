@@ -1,53 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSS Template</title>
+<title>Projects</title>
+<link rel="stylesheet" href="styles.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
 .link {
   padding: 2px 2px 2px 32px;
   text-decoration: none;
@@ -56,111 +14,6 @@ body {
   display: block;
   transition: 0.3s;
   background-color: #888;
-}
-
-#main {
-  transition: margin-left .5s;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 5px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0px;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li b {
-  display: block;
-  color: orange;
-  text-align: center;
-  padding: 3px 7px;
-  text-decoration: none;
-}
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-li b:hover {
-  background-color: #111;
-}
-
-.active {
-  background-color: #fda602;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 0px;}
-  .sidenav a {font-size: 18px;}
 }
 </style>
 </head>
@@ -182,12 +35,15 @@ li b:hover {
 <h3>Projects</h3>
 </header>
 <section>
-<nav>
-</nav>
 <article>
 	<a class="link" href="untitledAI.html"><h5>Untitled AI Project</h5></a>
 	<br>
 	A framework I created to experiment with creating artificial brains that mimic the structure of actual nervous systems
+</article>
+<article>
+	<a class="link" href="redditScrapper.html"><h5>Reddit Scrapper</h5></a>
+	<br>
+	A command line tool that will grab all the given posts from a subreddit made within a specified number of days
 </article>
 </section>
 </div>

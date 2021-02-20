@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reddit Scrapper</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>
+.navr{
+  float: right;
+  width: 50%;
+  background: #ccc;
+  padding: 20px;
+  min-height: 178px;
+}
+
+.picr{
+  float: right;
+  width: calc(100% - 400px);
+}
+
+@media (max-width: 575px) {
+  .ttt {
+    width: 100%;
+    height: auto;
+  }
+  .navr {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 655px) {
+  .picr {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id ="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class = "closebtn" onclick="closeNav()">&times;</a>
+<a></a>
+</div>
+
+<div id="main">
+<ul>
+<li id="menubtn"><b><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></b></li>
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="projects.html">Projects</a></li>
+</ul>
+</div>
+
+<div>
+<header>
+<h3>Reddit Scrapper</h3>
+</header>
+<section>
+<article>
+I started this project because I found reddit's api fairly lacking in terms of getting posts. They only allow you to get 100 posts max per call and working around that can be fairly confusing and time consuming. Now I don't have to worry about remembering what to do since it's all automated
+<br><br>
+The tool uses jq and was made for mac os. once you have the executable and have added it to your path you can run it via redditScrapper (subreddit name) (days)
+<br>
+The results are put into a file named results.txt in the current directory. It contains a list of all the urls of posts made within the given number of days for that subreddit
+<br><br>
+redditScrapper wallstreetbets 100
+<br><br>
+this will get the url of all posts on wallstreetbets within the last 100 days 
+</body>
+</html>

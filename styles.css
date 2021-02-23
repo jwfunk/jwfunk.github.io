@@ -61,7 +61,7 @@ header {
 /* Create two columns/boxes that floats next to each other */
 
 article {
-  float: left;
+  #float: left;
   padding: 20px;
   background-color: #f1f1f1;
 }

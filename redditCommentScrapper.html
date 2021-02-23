@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Reddit Scrapper</title>
+<title>Reddit Comment Scrapper</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
@@ -58,14 +58,14 @@
 </header>
 <section>
 <article>
-I started this project because I found reddit's api fairly lacking in terms of getting posts. They only allow you to get 100 posts max per call and working around that can be fairly confusing and time consuming. Now I don't have to worry about remembering what to do since it's all automated
+I started this project because I found reddit's api fairly lacking in terms of getting commments from posts. 
 <br><br>
-The tool uses jq and was made for mac os. once you have the executable and have added it to your path you can run it via redditScrapper (subreddit name) (days)
+The tool uses jq and was made for mac os. once you have the executable and have added it to your path you can run it via redditCommentScrapper (post URL). Or you can pipe multiple URLs into it as well.
 <br>
-The results are printed out to the console. It contains a list of all the urls of posts made within the given number of days for that subreddit
+The results are printed to standard output which can be redirected into their own file.
 <br><br>
-redditScrapper wallstreetbets 100
+redditScrapper https://www.reddit.com/r/wallstreetbets/comments/lplby9/daily_discussion_thread_for_february_22_2021
 <br><br>
-this will get the url of all posts on wallstreetbets within the last 100 days 
+this will get all the comments from this particular post
 </body>
 </html>

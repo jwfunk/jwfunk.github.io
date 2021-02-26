@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutoring</title>
+<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<div id ="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class = "closebtn" onclick="closeNav()">&times;</a>
+<a></a>
+</div>
+
+<div id="main">
+<ul>
+<li id="menubtn"><b><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></b></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a class="active">Tutoring</a></li>
+</ul>
+</div>
+<header>
+<h3>Projects</h3>
+</header>
+<br>
+<section>
+I spent roughly two years tutoring on Chegg Tutors before they ceased operations in January 2021. Now I tutor as a side gig when I have the time. My rate depends on my availability.
+<br><br>
+With Chegg I tutored college level computer science and physics students across the globe. My main strength is that I know what professors/teachers are trying to teach the students and am able to explain that in various ways. I can Identify where any confusion lyes and walk through it step by step in a way that is easy to understand.
+<br><br>
+Subjects I am comfortable teaching:
+<br><br>
+Computer Science:
+<br>
+Basics
+<br>
+Algorithms and Data Structures
+<br>
+Operating Systems
+<br>
+AI
+<br>
+Compilers
+<br>
+<br>
+Assembly
+<br>
+C
+<br>
+C++
+<br>
+Java
+<br>
+Python
+<br>
+Web Development
+<br>
+<br>
+Physics:
+<br>
+Basics
+<br>
+Mechanics
+<br>
+Electrodynamics
+</section>
+</div>
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("menubtn").style.width = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("menubtn").style.width = "42px";
+}
+</script>
+</body>
+</html>

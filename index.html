@@ -6,15 +6,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.link {
-  padding: 2px 2px 2px 32px;
+
+.github {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
-  font-size: 25px;
+  background-color: #4078c0;
   color: white;
-  display: block;
-  transition: 0.3s;
-  background-color: #888;
+  font-size: 20px;
 }
+
+.upwork {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background-color: #6fda44;
+  color: white;
+  font-size: 20px;
+}
+.about {
+  width: 250px;
+  background-color: #999;
+  float: left;
+}
+
+.content {
+  width: calc(100% - 250px);
+  float: left;
+}
+
+.contact {
+  color: white;
+  background-color: #999;
+}
+
 </style>
 </head>
 <body>
@@ -29,21 +54,25 @@
 <li id="menubtn"><b><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></b></li>
 <li><a class="active">Home</a></li>
 <li><a href="projects.html">Projects</a></li>
+<li><a href="tutoring.html">Tutoring</a></li>"
 </ul>
 </div>
 
 <header>
 <h3>JWFunk</h3>
 </header>
-<section>
-<nav>
-<a class="link" href="https://github.com/jwfunk">GitHub</a>
+<nav class="about">
+<a class="github" href="https://github.com/jwfunk">GitHub</a><a class="upwork" href="https:">Upwork</a>
+<br>
+<article class="contact">
+Contact: Funk4@wisc.edu
+</article>
 </nav>
+<section class="content">
 <article>
-This is a site to showcase the projects that I've been working on in my free time. I am also using this to familiarize myself with web development.
-<br>
-<br>
 There is a list of all my projects in the projects tab. It contains short descriptions of each and a more in depth on if you click the title. All of the source code can be found on my github.
+<br><br>
+The tutoring tab contains a list of all the subjects I cover as well as my past experience tutoring. 
 </article>
 </section>
 </div>

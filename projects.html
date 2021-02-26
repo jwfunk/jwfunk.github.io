@@ -15,6 +15,18 @@
   transition: 0.3s;
   background-color: #888;
 }
+
+.left {
+  width: 50%;
+  float: left;
+}
+
+.sub {
+  padding: 1px;
+  background-color: #777;
+  font-size: 20px;
+}
+
 </style>
 </head>
 <body>
@@ -30,11 +42,15 @@
 <li><a href="index.html">Home</a></li>
 <li><a class="active">Projects</a></li>
 </ul>
-
+</div>
 <header>
 <h3>Projects</h3>
 </header>
-<section>
+<br>
+<section class="left">
+<header class="sub">
+<h3>Personal</h3>
+</header>
 <article>
 	<a class="link" href="untitledAI.html"><h5>Untitled AI Project</h5></a>
 	<br>
@@ -49,6 +65,16 @@
 	<a class="link" href="redditCommentScrapper.html"><h5>Reddit Comment Scrapper</h5></a>
 	<br>
 	A command line tool that will grab all the comments from a given post
+</article>
+</section>
+<section class="left">
+<header class="sub">
+<h3>Contracted</h3>
+</header>
+<article>
+	<a class="link" href="https://roleplayexercise.github.io"><h5>Roleplay Exercise</h5></a>
+	<br>
+	A site which randomly loads 3 cards for two people to roleplay a scenario
 </article>
 </section>
 </div>
